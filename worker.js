@@ -1,3 +1,4 @@
+cat > /mnt/user-data/outputs/worker.js << 'WORKEREOF'
 const HTML = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -429,3 +430,5 @@ export default {
     });
   }
 };
+WORKEREOF
+echo "done"
