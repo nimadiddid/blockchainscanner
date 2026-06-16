@@ -54,7 +54,7 @@ const HTML = `<!DOCTYPE html>
     .chain-btn.open .arrow { transform: rotate(180deg); }
     .chain-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     .chain-dropdown { position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: #1a0a0a; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,0.6); z-index: 50; max-height: 0; opacity: 0; transition: max-height 0.3s ease, opacity 0.25s ease; pointer-events: none; }
-    .chain-dropdown.open { max-height: 320px; opacity: 1; pointer-events: all; overflow-y: auto; }
+    .chain-dropdown.open { max-height: 420px; opacity: 1; pointer-events: all; overflow-y: auto; }
     .chain-option { display: flex; align-items: center; gap: 10px; padding: 12px 16px; font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--text); cursor: pointer; transition: background 0.15s; }
     .chain-option:hover { background: rgba(224,48,48,0.10); }
     .chain-option.active { background: rgba(224,48,48,0.15); color: var(--red-l); }
@@ -149,12 +149,68 @@ const HTML = `<!DOCTYPE html>
             <span class="chain-id">ID: 1</span>
           </div>
           <div class="chain-option"
-            data-chainid="8453" data-name="Base" data-dot="#0052ff"
-            data-explorer="https://basescan.org" data-label="basescan.org"
+            data-chainid="137" data-name="Polygon" data-dot="#8247e5"
+            data-explorer="https://polygonscan.com" data-label="polygonscan.com"
+            data-apitype="etherscan" data-symbol="POL" onclick="selectChain(this)">
+            <span class="chain-dot" style="background:#8247e5;"></span>
+            <span class="chain-name">Polygon</span>
+            <span class="chain-id">ID: 137</span>
+          </div>
+          <div class="chain-option"
+            data-chainid="59144" data-name="Linea" data-dot="#61dfff"
+            data-explorer="https://lineascan.build" data-label="lineascan.build"
             data-apitype="etherscan" data-symbol="ETH" onclick="selectChain(this)">
-            <span class="chain-dot" style="background:#0052ff;"></span>
-            <span class="chain-name">Base</span>
-            <span class="chain-id">ID: 8453</span>
+            <span class="chain-dot" style="background:#61dfff;"></span>
+            <span class="chain-name">Linea</span>
+            <span class="chain-id">ID: 59144</span>
+          </div>
+          <div class="chain-option"
+            data-chainid="42220" data-name="Celo" data-dot="#35d07f"
+            data-explorer="https://celoscan.io" data-label="celoscan.io"
+            data-apitype="etherscan" data-symbol="CELO" onclick="selectChain(this)">
+            <span class="chain-dot" style="background:#35d07f;"></span>
+            <span class="chain-name">Celo</span>
+            <span class="chain-id">ID: 42220</span>
+          </div>
+          <div class="chain-option"
+            data-chainid="33139" data-name="ApeChain" data-dot="#0054fa"
+            data-explorer="https://apescan.io" data-label="apescan.io"
+            data-apitype="etherscan" data-symbol="APE" onclick="selectChain(this)">
+            <span class="chain-dot" style="background:#0054fa;"></span>
+            <span class="chain-name">ApeChain</span>
+            <span class="chain-id">ID: 33139</span>
+          </div>
+          <div class="chain-option"
+            data-chainid="130" data-name="Unichain" data-dot="#ff007a"
+            data-explorer="https://uniscan.xyz" data-label="uniscan.xyz"
+            data-apitype="etherscan" data-symbol="ETH" onclick="selectChain(this)">
+            <span class="chain-dot" style="background:#ff007a;"></span>
+            <span class="chain-name">Unichain</span>
+            <span class="chain-id">ID: 130</span>
+          </div>
+          <div class="chain-option"
+            data-chainid="143" data-name="Monad" data-dot="#836ef9"
+            data-explorer="https://monadexplorer.com" data-label="monadexplorer.com"
+            data-apitype="etherscan" data-symbol="MON" onclick="selectChain(this)">
+            <span class="chain-dot" style="background:#836ef9;"></span>
+            <span class="chain-name">Monad</span>
+            <span class="chain-id">ID: 143</span>
+          </div>
+          <div class="chain-option"
+            data-chainid="999" data-name="HyperEVM" data-dot="#00e5ff"
+            data-explorer="https://hyperliquid.xyz/explorer" data-label="hyperliquid.xyz"
+            data-apitype="etherscan" data-symbol="HYPE" onclick="selectChain(this)">
+            <span class="chain-dot" style="background:#00e5ff;"></span>
+            <span class="chain-name">HyperEVM</span>
+            <span class="chain-id">ID: 999</span>
+          </div>
+          <div class="chain-option"
+            data-chainid="4326" data-name="MegaETH" data-dot="#00ff88"
+            data-explorer="https://megaexplorer.xyz" data-label="megaexplorer.xyz"
+            data-apitype="etherscan" data-symbol="ETH" onclick="selectChain(this)">
+            <span class="chain-dot" style="background:#00ff88;"></span>
+            <span class="chain-name">MegaETH</span>
+            <span class="chain-id">ID: 4326</span>
           </div>
           <div class="chain-option"
             data-chainid="50312" data-name="Somnia Mainnet" data-dot="#a855f7"
