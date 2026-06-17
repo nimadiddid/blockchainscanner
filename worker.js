@@ -1,4 +1,3 @@
-cat > /mnt/user-data/outputs/worker.js << 'WORKEREOF'
 const HTML = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +53,7 @@ const HTML = `<!DOCTYPE html>
     .chain-btn.open .arrow { transform: rotate(180deg); }
     .chain-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     .chain-dropdown { position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: #1a0a0a; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,0.6); z-index: 50; max-height: 0; opacity: 0; transition: max-height 0.3s ease, opacity 0.25s ease; pointer-events: none; }
-    .chain-dropdown.open { max-height: 420px; opacity: 1; pointer-events: all; overflow-y: auto; }
+    .chain-dropdown.open { max-height: 320px; opacity: 1; pointer-events: all; overflow-y: auto; }
     .chain-option { display: flex; align-items: center; gap: 10px; padding: 12px 16px; font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--text); cursor: pointer; transition: background 0.15s; }
     .chain-option:hover { background: rgba(224,48,48,0.10); }
     .chain-option.active { background: rgba(224,48,48,0.15); color: var(--red-l); }
@@ -486,5 +485,3 @@ export default {
     });
   }
 };
-WORKEREOF
-echo "done"
